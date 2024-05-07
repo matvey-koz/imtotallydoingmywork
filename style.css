@@ -87,6 +87,10 @@ input[type="checkbox"] {
     width: 20em;
 }
 
+.form {
+    text-align: center;
+}
+
 .submitButton {
     margin: auto;
     text-align: center;

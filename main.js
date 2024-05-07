@@ -1,4 +1,6 @@
 function IWillFindYou() {
+    // remove welcome text
+    document.querySelector("body > div:nth-child(1)").style.display = "none";
     // add container div
     let container = document.createElement("div");
     container.classList.add("container");
@@ -8,12 +10,23 @@ function IWillFindYou() {
     // add pasword label
     let label = document.createElement("label")
     label.innerText = "You really thought you could just see the answers huh? What's the password?";
+    //add password input box
+    let input = document.createElement("input");
+    input.setAttribute("type", "password");
     // add submit button container
     let submitContainer = document.createElement("div");
     submitContainer.classList.add("submitButton");
     // add submit button
     let submit = document.createElement("button");
+    submit.innerText = "Submit";
     submit.setAttribute("onclick", "doNothing()");
+    // append elements
+    submitContainer.append(submit);
+    form.append(label);
+    form.append(input);
+    form.append(submitContainer);
+    container.append(form);
+    document.body.appendChild(container);
 
     // let text = document.createElement("p");
     // text.innerText = "Enter the password hehehe:";
